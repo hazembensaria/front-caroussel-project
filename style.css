@@ -1,0 +1,114 @@
+.big{
+   scale: 1.2;
+   transition: all .1s ease-in-out;
+   border-radius: 5px;
+   cursor: pointer;
+   
+}
+.liverpool{
+    width: 90px;
+}
+.butt{
+    padding: 0 1.5rem;
+    outline: none;
+    color: white;
+    background-color: #1957b4;
+    border: none;
+    border-radius: 5px;
+  
+}
+.mainImage{
+    box-shadow: 3px 3px 3px 5px black;
+}
+#menuButton{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.butt:hover{
+    cursor: pointer;
+}
+.show{
+    display: flex !important;
+}
+
+#menu div{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #4d61c5;
+    color: white;
+    
+}
+/* .tr{
+    transform: scale(.3);
+    transition: all 5s ease-in-out;
+} */
+
+.moveDown{
+    transform: translateY(11rem);
+    transition: all .5s ease-in-out;
+
+}
+
+.moveUp{
+    
+    transition: all .5s ease-in-out;
+
+}
+.scale{
+    transform: scale(1.25) translateY(7rem);
+    transition: all .5s ease-in-out;
+}
+.scaleDown{
+    transform: scale(1) ;
+    transition: all .5s ease-in-out;
+}
+
+.menuMoveDown{
+    transform: translateY(7rem);
+    transition:all .5s ease-in-out   ;
+
+}
+.menuMoveUp{
+  
+    transition:all .5s ease-in-out   ;
+
+}
+.scaleMainImage{
+    animation: scaleMainImage .8s ;
+}
+@keyframes scaleMainImage
+{
+  0%{
+    transform: scale(1);
+  }
+
+  /* 25%{
+    transform: scale(.5);
+  } */
+  50%{
+    transform: scale(0);
+
+  }
+  /* 75%{
+    transform: scale(.5);
+
+  } */
+  100%{
+    transform: scale(1);
+
+  }
+}
+
