@@ -15,18 +15,18 @@ let isDisplayAuto = false
 show = true
 let index = 0
 let imagesSepareted = [
-    "liverpool1",    "liverpool2",    "liverpool3",    "liverpool4",    "liverpool5", "liverpool",
+    "Liverpool1",    "Liverpool2",    "Liverpool3",    "Liverpool4",    "Liverpool5", "Liverpool",
     "chelsea1", "chelsea2", "chelsea3", "chelsea4", "chelsea5", "chelsea6",
     "unt1", "unt2","unt3","unt4","unt5","unt6",
     "city1","city2","city3","city4","city5","city6"
 ]
 let images = [
-    ["liverpool1",    "liverpool2",    "liverpool3",    "liverpool4",    "liverpool5", "liverpool"],
+    ["Liverpool1",    "Liverpool2",    "Liverpool3",    "Liverpool4",    "Liverpool5", "Liverpool"],
     ["chelsea1", "chelsea2", "chelsea3", "chelsea4", "chelsea5", "chelsea6"],
     ["unt1", "unt2","unt3","unt4","unt5","unt6"],
     ["city1","city2","city3","city4","city5","city6"]
 ]
-function styleover(){
+function styleover(){   
     this.classList.add('big');
 }
 function changeImage(){
