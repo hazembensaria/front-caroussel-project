@@ -15,13 +15,13 @@ let isDisplayAuto = false
 show = true
 let index = 0
 let imagesSepareted = [
-    "liverpool",    "liverpool 1",    "liverpool 2",    "liverpool 3",    "liverpool 4",    "liverpool 5",
+    "liverpool1",    "liverpool2",    "liverpool3",    "liverpool4",    "liverpool5", "liverpool",
     "chelsea1", "chelsea2", "chelsea3", "chelsea4", "chelsea5", "chelsea6",
     "unt1", "unt2","unt3","unt4","unt5","unt6",
     "city1","city2","city3","city4","city5","city6"
 ]
 let images = [
-    ["liverpool",    "liverpool 1",    "liverpool 2",    "liverpool 3",    "liverpool 4",    "liverpool 5"],
+    ["liverpool1",    "liverpool2",    "liverpool3",    "liverpool4",    "liverpool5", "liverpool"],
     ["chelsea1", "chelsea2", "chelsea3", "chelsea4", "chelsea5", "chelsea6"],
     ["unt1", "unt2","unt3","unt4","unt5","unt6"],
     ["city1","city2","city3","city4","city5","city6"]
