@@ -1,4 +1,4 @@
-console.log("hazem")
+
 let x  = document.getElementsByClassName("liverpool")
 let next  = document.getElementById('next')
 let menuButton  = document.getElementById('menuButton')
@@ -26,9 +26,6 @@ let images = [
     ["unt1", "unt2","unt3","unt4","unt5","unt6"],
     ["city1","city2","city3","city4","city5","city6"]
 ]
-function styleover(){   
-    this.classList.add('big');
-}
 function changeImage(){
     image.classList.add("scaleMainImage")
     setTimeout(()=>{
@@ -36,7 +33,7 @@ function changeImage(){
     },1000)
   image.src = this.getAttribute('src');
 }
-function changeImages(){
+function nextImages(){
     index == 3 ? index = 0 : index++ ;
  for(j=0 ; j<6 ; j++){
     x[j].src = "images/"+images[index][j]+".jpeg"
@@ -45,11 +42,7 @@ function changeImages(){
 image.src = x[0].src
   }
 function showMenu(){
-  
-        // menu.classList.add("menuMoveDown")
-        // bottom.classList.add("moveDown")
-        // image.classList.add("scale")
-        
+        console.log("this is show menu function");
         if(!bottom.classList.contains("moveDown")
     ){
         bottom.classList.add("moveDown")
@@ -77,7 +70,7 @@ function displayAuto(){
 
         inter =   setInterval(()=>{
             image.src =  "images/"+imagesSepareted[l]+".jpeg"
-            l== imagesSepareted.length ? l=0 : l++
+            l== imagesSepareted.length-1 ? l=0 : l++
       
           },2000)
     }
@@ -99,28 +92,24 @@ function displayAuto(){
    image.src = x[0].src
      }
 
-
-function styleout(){
-    this.classList.remove('big');
-}
-
-for(i=0 ; i< x.length ; i++){
-    x[i].addEventListener("mouseover" ,styleover)
-}
-for(i=0 ; i< x.length ; i++){
-    x[i].addEventListener("mouseout" ,styleout)
-}
 for(i=0 ; i< x.length ; i++){
     x[i].addEventListener("click" ,changeImage)
 }
-next.addEventListener("click" ,changeImages)
-one.addEventListener("click" ,changeImages)
+document.addEventListener("keypress" , (e)=>{
+    if(e.code === "Space")
+        {displayAuto()}
+
+})   
+next.addEventListener("click" ,nextImages)
+one.addEventListener("click" ,nextImages)
 tow.addEventListener("click" ,previousImages)
 
 previous.addEventListener("click" ,previousImages)
 
 menuButton.addEventListener("click" ,showMenu)
 auto.addEventListener("click" ,displayAuto)
+ 
+
 
 
 
