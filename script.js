@@ -10,7 +10,7 @@ let previous  = document.getElementById('previous')
 let image = document.getElementById("mainImage")
 let one = document.getElementById("one")
 let bottom = document.getElementById("bottom")
-let tow = document.getElementById("tow")
+let tow = document.getElementById("tow") 
 let auto = document.getElementById("auto")
 playButton = document.getElementById("playButton")
 shuffleButton = document.getElementById("shuffle")
@@ -19,6 +19,8 @@ shuffleButton = document.getElementById("shuffle")
 */
 let isDisplayAuto = false
 show = true
+
+ var display = false ;
 
 let index = 0
 
@@ -136,10 +138,25 @@ function displayAuto(){
     /**
      * this function show a random image from the caroussel 
      */
+    var actuelRand = 0
      function pickRandomImage(){
-        rand = Math.floor(Math.random()*imagesSepareted.length)
-        l= rand
-        image.src = "images/"+imagesSepareted[rand]+".jpeg"
+        if(!display){    
+            inter =   setInterval(()=>{
+               rand = Math.floor(Math.random()*imagesSepareted.length)
+                l= rand
+                while(rand == actuelRand+1 || rand == actuelRand -1)
+                    {rand = Math.floor(Math.random()*imagesSepareted.length)
+                    l= rand}
+                    actuelRand = rand
+                image.src = "images/"+imagesSepareted[rand]+".jpeg"
+          
+              },2000)
+        }
+        else{
+            clearInterval(inter)
+           
+        }
+     display = !display
 
      }
 /** 
@@ -151,18 +168,18 @@ for(i=0 ; i< imageList.length ; i++){
 /** 
  * here we are adding the "keypress" event to controll the caroussel 
  */
-document.addEventListener("keypress" , (event)=>{
-    if(event.key === "ArrowLeft")
-      {
-       console.log("jsfklk")
-        previousSeparatedImage()}
-    if(event.code === "Space")
-        {displayAuto()}
-     if(event.key ==="ArrowRight")
-        {nextSeparatedImage()}
- 
-
-})     
+document.addEventListener("keydown", (event) => {
+    if(event.key === "ArrowLeft") {
+        console.log("jsfklk");
+        previousSeparatedImage();
+    }
+    if(event.code === "Space") {
+        displayAuto();
+    }
+    if(event.key === "ArrowRight") {
+        nextSeparatedImage();
+    }
+});
   /**   
    * here we are adding events to DOM elements that we selected 
    */
